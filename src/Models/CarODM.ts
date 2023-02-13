@@ -18,6 +18,14 @@ export default class CarODM {
     this.model = models.Car || model('Car', this.schema);
   }
 
+  public async findAll() {
+    return this.model.find({}, { __v: 0 });
+  }
+
+  public async findId(id: string) {
+    return this.model.find({ _id: id }, { __v: 0 });
+  }
+
   public async create(objCreate: ICar) {
     return this.model.create({ ...objCreate });
   }
