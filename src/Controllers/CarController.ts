@@ -36,4 +36,22 @@ export default class CarController {
       res.status(500).json({ message: 'error 500' });
     }
   };
+
+  public update = async (req: Request, res: Response) => {
+    const { id } = req.params;
+
+    if (id.length !== 24 || !id) {
+      return res.status(statusCode.unprocessableEntity)
+        .json({ message: 'Invalid mongo id' });
+    }
+
+    try {
+      const { type, message } = await this.service.update(id, req.body);
+
+      if (type) return res.status(type).json({ message });
+      return res.status(statusCode.ok).json(message);
+    } catch (error) {
+      res.status(500).json({ message: 'error 500' });
+    }
+  };
 }

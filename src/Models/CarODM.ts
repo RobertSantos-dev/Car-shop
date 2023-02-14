@@ -29,4 +29,8 @@ export default class CarODM {
   public async create(objCreate: ICar) {
     return this.model.create({ ...objCreate });
   }
+
+  public async update(id: string, objUpdate: ICar) {
+    return this.model.updateOne({ _id: id }, objUpdate);
+  }
 }

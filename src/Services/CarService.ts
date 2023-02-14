@@ -32,4 +32,15 @@ export default class CarService {
     const newCar = await this.cars.create(objCar);
     return this.createCarDomain(newCar);
   }
+
+  public async update(id: string, objCar: ICar) {
+    const carId = await this.cars.findId(id);
+
+    if (carId.length === 0) {
+      return { type: statusCode.notFound, message: 'Car not found' };
+    }
+
+    await this.cars.update(id, objCar);
+    return { type: null, message: this.createCarDomain({ id, ...objCar }) };
+  }
 }
