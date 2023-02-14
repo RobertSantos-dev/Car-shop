@@ -1,10 +1,8 @@
-export default interface ICar {
-  id?: string,
-  model: string,
-  year: number,
-  color: string,
-  status?: boolean,
-  buyValue: number,
+import IGeneric from './IVehicle';
+
+interface ICar extends IGeneric {
   seatsQty: number,
   doorsQty: number,
 }
+
+export default ICar;
