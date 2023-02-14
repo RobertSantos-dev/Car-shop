@@ -1,5 +1,4 @@
-const carsAll = [{
-  id: '6348513f34c397abcad040b2',
+const carCreate = {
   model: 'Marea',
   year: 2002,
   color: 'Black',
@@ -7,6 +6,11 @@ const carsAll = [{
   buyValue: 15.990,
   doorsQty: 4,
   seatsQty: 5,
+};
+
+const carsAll = [{
+  id: '6348513f34c397abcad040b2',
+  ...carCreate,
 }, {
   id: '634852326b35b59438fbea31',
   model: 'Tempra',
@@ -18,14 +22,14 @@ const carsAll = [{
   seatsQty: 5,
 }];
 
-const carCreate = {
+const carUpdate = {
   model: 'Marea',
-  year: 2002,
-  color: 'Black',
+  year: 1992,
+  color: 'Red',
   status: true,
-  buyValue: 15.990,
-  doorsQty: 4,
+  buyValue: 12.000,
+  doorsQty: 2,
   seatsQty: 5,
 };
 
-export default { carsAll, carCreate };
+export default { carsAll, carCreate, carUpdate };
