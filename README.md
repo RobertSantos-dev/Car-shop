@@ -1,5 +1,7 @@
 # Car shop
-Este projeto foi desenvolvido durante o **modulo de BackEnd** da **Trybe**. Por conta disso todos os arquivos de configuração foram feitos pela instituição.
+Este projeto foi desenvolvido durante o periodo em que estive estudando no **modulo de BackEnd** da **TRYBE**. Onde, deversas tecnologias foram abordadas durante a minha formação como devenvolvedor Web, Esses são alguns [exemplos](#tecnologias-e-ferramentas).
+
+**OBS**: Os arquivos de configuração foram disponibilizados pela instituição.
 
 ## Resumo
 Este projeto tem como objetivo gerenciar uma concessonária de veiculos, utilizando ferramentas como `POO`, `API CRUD` e `MongoDb` por meio do ODM `Mongoose`. Além tambem de usar metodologias como **BDD**, **TDD**, **SOLID**.
